@@ -1,0 +1,9 @@
+{% extends "profiles/0base.html" %}
+{% block content %}
+<h3>REGISTER ADVOCATE</h3>
+    <form method="post" action="/advocate/create/">{% csrf_token %}
+    {{form.as_p}}
+		<input type="submit" value="Register" />
+        </form>
+
+{% endblock content %}

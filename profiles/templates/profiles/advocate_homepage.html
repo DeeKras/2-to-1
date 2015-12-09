@@ -1,0 +1,38 @@
+{% extends "profiles/0base.html" %}
+{% block content %}
+
+
+<h3>ADVOCATE PAGE</h3>
+Welcome {{user}}!
+<table>
+    <tr>
+        <td><a href="{% url "single_create" %}"><button>Add Single</button></a></td>
+        <td><button>Find One of my Singles</button></td>
+        <td><a href="{% url "advocate_edit" user.id %}"><button>My Account</button></a></td>
+        <td><a href="{% url "logout" %}"><button>Sign Out</button></a></td>
+    </tr>
+</table>
+<hr>
+<h3>My Singles</h3>
+{% for single in singles %}
+<table>
+    <col width="100">
+    <col width="100">
+    <col width="40">
+
+
+    <tr>
+        <td>{{single.lastname}}</td>
+        <td>{{single.firstname}}</td>
+        <td>{{single.gender}}</td>
+        <td>
+            <a href="{% url "single_edit" single.id %}"><button>edit</button></a>
+            <button>delete</button>
+            <button>Create jpg</button>
+            <button>Email Profile</button>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+
+{% endblock content %}

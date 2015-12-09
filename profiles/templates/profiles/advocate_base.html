@@ -1,0 +1,14 @@
+{% extends "profiles/0base.html" %}
+{% block content %}
+<h3>ADVOCATE PAGE</h3>
+Welcome {{user}}!
+<table>
+    <tr>
+        <td><a href="{% url "single_create" %}"><button>Add Single</button></a></td>
+        <td><button>Find One of my Singles</button></td>
+        <td><button>My Account</button></td>
+        <td><a href="{% url "logout" %}"><button>Sign Out</button></a></td>
+    </tr>
+</table>
+<hr>
+{% endblock content %}

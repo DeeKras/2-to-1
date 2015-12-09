@@ -1,0 +1,13 @@
+{% extends "profiles/0base.html" %}
+{% block content %}
+
+<h3>HOME</h3>
+<a href="{% url "advocate_create" %}"><button>Create Advocate Profile</button></a>
+
+<hr>
+
+<a href="{% url "login" %}"><button>Sign In</button></a>
+<a href="{% url "logout" %}"><button>Sign Out</button></a>
+
+
+{% endblock content %}
